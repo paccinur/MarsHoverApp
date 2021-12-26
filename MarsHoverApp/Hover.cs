@@ -45,7 +45,7 @@ namespace MarsHoverApp
                             switch (Align)
                             {
                                 case (Alignment.N):
-                                    this.YAxisPosition = this.YAxisPosition + 1 < field.HorizontalSize ? this.YAxisPosition + 1 : this.YAxisPosition;
+                                    this.YAxisPosition = this.YAxisPosition + 1 <= field.HorizontalSize ? this.YAxisPosition + 1 : this.YAxisPosition;
                                     break;
                                 case (Alignment.S):
                                     this.YAxisPosition = this.YAxisPosition - 1 >= 0 ? this.YAxisPosition - 1 : this.YAxisPosition;
@@ -54,7 +54,7 @@ namespace MarsHoverApp
                                     this.XAxisPosition = this.XAxisPosition - 1 >= 0 ? this.XAxisPosition -1 : this.XAxisPosition;
                                     break;
                                 case (Alignment.E):
-                                    this.XAxisPosition = this.XAxisPosition + 1 < field.VerticalSize ? this.XAxisPosition + 1 : this.XAxisPosition;
+                                    this.XAxisPosition = this.XAxisPosition + 1 <= field.VerticalSize ? this.XAxisPosition + 1 : this.XAxisPosition;
                                     break;
                             }
                             var clashId = this.CheckClashToOtherHoverIn(field);
