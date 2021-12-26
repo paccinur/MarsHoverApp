@@ -37,7 +37,11 @@ namespace MarsHoverApp.Extensions
             {
                 throw new InvalidArgumentException();
             }
-
+            
+            if(hoverX > field.HorizontalSize || hoverY > field.VerticalSize)
+            {
+                throw new InvalidArgumentException();
+            }
             //Check if there are any existing hovers in the given spot already.
             foreach (Hover hover in field.Hovers)
             {
