@@ -61,8 +61,8 @@ namespace MarsHoverApp
                             if (clashId != -1)
                             {
                                 this.Align = startAlign;
-                                this.XAxisPosition = XAxisPosition;
-                                this.YAxisPosition = YAxisPosition;
+                                this.XAxisPosition = startX;
+                                this.YAxisPosition = startY;
                                 throw new ClashException(clashId, this.HoverId);
                             }
                             break;
