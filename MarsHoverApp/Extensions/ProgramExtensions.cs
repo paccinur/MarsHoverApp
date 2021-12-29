@@ -37,8 +37,14 @@ namespace MarsHoverApp.Extensions
             {
                 throw new InvalidArgumentException();
             }
-            
-            if(hoverX > field.HorizontalSize || hoverY > field.VerticalSize)
+
+            if (facing != Alignment.N.GetAlignmentFromEnum() || facing != Alignment.W.GetAlignmentFromEnum() ||
+                facing != Alignment.E.GetAlignmentFromEnum() || facing != Alignment.S.GetAlignmentFromEnum())
+            {
+                throw new InvalidArgumentException();
+            }
+
+            if (hoverX > field.HorizontalSize || hoverY > field.VerticalSize)
             {
                 throw new InvalidArgumentException();
             }
@@ -50,7 +56,7 @@ namespace MarsHoverApp.Extensions
                     throw new ClashException($"In coordinates[{hoverX},{hoverY}], there is already an existing hover.");
                 }
             }
-            var align = HoverExtensions.GetAlignmentToEnum(facing);
+            var align = facing.ToEnum();
             var hoverToDeploy = new Hover(hoverX, hoverY, align);
 
             return hoverToDeploy;

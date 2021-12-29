@@ -38,7 +38,7 @@ namespace MarsHoverApp
                     hoverToDeploy.Move(inputMovement, field);
 
                     Console.WriteLine($"Hover {hoverToDeploy.HoverId} successfully moved.");
-                    Console.WriteLine($"Final position: {hoverToDeploy.XAxisPosition}, {hoverToDeploy.YAxisPosition}, {hoverToDeploy.GetAlignmentFromEnum()}.");
+                    Console.WriteLine($"Final position: {hoverToDeploy.XAxisPosition}, {hoverToDeploy.YAxisPosition}, {hoverToDeploy.Align.GetAlignmentFromEnum()}.");
                     Console.WriteLine("Write exit to stop, enter to continue adding hovers.");
 
                     var exit = Console.ReadLine();

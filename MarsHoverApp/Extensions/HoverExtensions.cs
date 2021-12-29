@@ -19,9 +19,9 @@ namespace MarsHoverApp.Extensions
             }
             return -1;
         }
-        public static char GetAlignmentFromEnum(this Hover hover)
+        public static char GetAlignmentFromEnum(this Alignment align)
         {
-            switch (hover.Align)
+            switch (align)
             {
                 case (Alignment.N):
                     return 'N';
@@ -35,7 +35,7 @@ namespace MarsHoverApp.Extensions
                     return ' ';
             }
         }
-        public static Alignment GetAlignmentToEnum(char align)
+        public static Alignment ToEnum(this char align)
         {
             switch (align)
             {
