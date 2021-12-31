@@ -38,8 +38,8 @@ namespace MarsHoverApp.Extensions
                 throw new InvalidArgumentException();
             }
 
-            if (facing != Alignment.N.GetAlignmentFromEnum() || facing != Alignment.W.GetAlignmentFromEnum() ||
-                facing != Alignment.E.GetAlignmentFromEnum() || facing != Alignment.S.GetAlignmentFromEnum())
+            if (facing != Alignment.N.GetAlignmentFromEnum() && facing != Alignment.W.GetAlignmentFromEnum() &&
+                facing != Alignment.E.GetAlignmentFromEnum() && facing != Alignment.S.GetAlignmentFromEnum())
             {
                 throw new InvalidArgumentException();
             }
